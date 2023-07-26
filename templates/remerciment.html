@@ -1,4 +1,18 @@
+
 {% extends 'base.html' %}
 {% block content %}
 <h1>{% block title %} Welcome to FlaskBlog remerciment{% endblock %}</h1>
+<ul>
+    <li>unom={{nom}}</li>
+    <li>prenom={{prenom}}</li>
+    <li>don={{don}}</li>
+    <li>message={{message}}</li>
+
+</ul>
+<ul>
+    {% for element in donateur %}
+        <li>{{ element }}</li>
+    {% endfor %}
+    </ul>
+    
 {% endblock %}
