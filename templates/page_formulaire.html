@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>{% block title %} Welcome to FlaskBlog page formulaire{% endblock %}</h1>
+<form action="/formu" method="POST">
+    <input type="text" name="nom" />
+    <input type="text" name="prenom" />
+    <input type="number" name="chiffre" />
+    <input type="text" name="message" />
+    <input type="submit" value="sub mite" title="une mite dans un sous marin mdr"/>
+</form> 
+{% endblock %}
