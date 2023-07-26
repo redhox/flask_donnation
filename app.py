@@ -8,7 +8,12 @@ load_dotenv()
 app = Flask(__name__)
 @app.route('/')
 def index():
-    return render_template('index.html')
+    donation=get_donateur()
+    montant=0
+    for donateur in donation:
+        montant += donateur['don']
+        
+    return render_template('index.html',montant=montant)
 
 @app.route('/chaque_don_compte')
 def formulaire():
