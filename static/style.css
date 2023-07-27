@@ -1,0 +1,131 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #f7f7f7;
+}
+body{
+    background-color: #f7f7f7;
+    min-height: 100vh;
+}
+header{
+    background-color: #807981;
+    box-shadow: black 5px 5px 5px;
+    height: 4vh;
+    border-radius: 0%;
+
+}
+main{
+    min-height: 96vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+}
+nav > a{
+    height: 98%;
+    width: auto;
+    padding: 5px;
+    margin: 1px;
+    background-color: #2f3035;
+
+}
+nav > a:hover{
+    background-color: #33343d;
+}
+input{
+    background-color: #2f3035;
+}
+#index_box{
+    height: 20vh;
+    min-width: 30%;
+    min-width: 500px;
+}
+#formulaire_box{
+    padding: 5px;
+    min-width: 30%;
+    min-width: 500px;
+    display: flex;
+    flex-flow: column;
+}
+#formilaire_box > input{
+    width: 50%;
+}
+.centrer{
+    background-color: #33343d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5px;
+    box-shadow: black 5px 5px 5px;
+
+}
+#input_box1{
+    width: 90%;
+    display: flex;
+    flex-flow: row;
+}
+#input_box1 > input{
+    width: 50%;
+}
+#input_box2{
+    width: 90%;
+    display: flex;
+    flex-flow: column;
+}
+#input_box2 > input{
+    width: 100%;
+    align-self: center;
+}
+#input_box2 > :first-child{
+    width: 50%;
+}
+#formulaire_box > :last-child{
+    width: 20%;
+    margin-left: 80%;
+
+}
+.merci_box1{
+    height: 20vh;
+    width: 40%;
+    margin: auto;
+    margin-top:30vh ;
+    margin-bottom: 15vh;
+    background-color: #33343d;
+    box-shadow: black 5px 5px 5px;
+}
+.merci_box1 > ul{
+    padding: 10px;
+    margin-left: 70%;
+    width: 30%;
+}
+.merci_box2{
+    width: 70%;
+    background-color: #e3e0de;
+    box-shadow: black 5px 5px 5px;
+    margin-top: 15%;
+
+}
+
+.donateur{
+    display: flex;
+    flex-direction: row;
+    padding:10px;
+}
+.donateur > div{
+    width: 15%;
+    background-color: #85846f;
+    padding: 10px;
+    box-shadow: black 5px 5px 5px;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+.donateur> :first-child{
+    width: 68%;
+}

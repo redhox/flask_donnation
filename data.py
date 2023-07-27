@@ -7,13 +7,12 @@ def get_donateur():
     resulta_bdd=cursor.fetchall()
     donateurs = []
     for enregistrement in resulta_bdd :
-        donateur = {}
-        donateur['id'] = enregistrement[0]
-        donateur['nom'] = enregistrement[1]
-        donateur['prenom'] = enregistrement[2]
-        donateur['don'] = enregistrement[3]
-        donateur['message'] = enregistrement[4]
-        donateurs.append(donateur)
+        liste=[]
+        liste.append(enregistrement[1])
+        liste.append(enregistrement[2])
+        liste.append(enregistrement[3])
+        liste.append(enregistrement[4])
+        donateurs.append(liste)
     deconnexion()
     return donateurs
 

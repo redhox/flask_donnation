@@ -1,11 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>{% block title %} Welcome to FlaskBlog page formulaire{% endblock %}</h1>
-<form action="/merci" method="POST">
-    <input type="text" name="nom" />
-    <input type="text" name="prenom" />
-    <input type="number" name="don" />
-    <input type="text" name="message" />
-    <input type="submit" value="sub mite" title="une mite dans un sous marin mdr"/>
-</form> 
+<section class="centrer">
+    <h1>{% block title %} Welcome to FlaskBlog page formulaire{% endblock %}</h1>
+
+    <form action="/merci" method="POST" class="formulaire"id="formulaire_box">
+        <div id="input_box1">
+            <input type="text" name="nom" title="nom" placeholder="nom"/>
+            <input type="text" name="prenom" title="prenom" placeholder="prenom"/>
+        </div>
+        <div id="input_box2">
+            <input type="number" name="don" title="don" placeholder="mille balle" value="1000"/>
+            <input type="text" name="message" title="message d'une grande bienveillance" placeholder="message d'une grande bienveillance"/>
+        </div>
+        <input type="submit" value="sub mite" title="une mite dans un sousmarin mdr"/>
+    </form> 
+</section>
 {% endblock %}

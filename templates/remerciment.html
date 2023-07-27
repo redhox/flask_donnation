@@ -2,17 +2,27 @@
 {% extends 'base.html' %}
 {% block content %}
 <h1>{% block title %} Welcome to FlaskBlog remerciment{% endblock %}</h1>
-<ul>
-    <li>unom={{nom}}</li>
-    <li>prenom={{prenom}}</li>
-    <li>don={{don}}</li>
-    <li>message={{message}}</li>
-
-</ul>
-<ul>
-    {% for element in donateur %}
-        <li>{{ element }}</li>
-    {% endfor %}
+{% if don: %}
+<section class="merci_box1" {{"style= dispay:none"}}>
+    <ul>
+        <li>{{nom}}</li>
+        <li>{{prenom}}</li>
+        <li>{{don}}</li>
+        <li>{{message}}</li>
     </ul>
+
+</section>
+{% endif %}
+
+<section class="merci_box2">
+    {% for element in donateur %}
+        <ul class="donateur">
+            <div><span>{{ element[3]}}</span></div>
+            <div><span>{{ element[2]}}</span></div>
+            <div><span>{{ element[0]}}</span> <span>{{ element[1]}}</span></div>
+
+        </ul>
+    {% endfor %}
+</section>
     
 {% endblock %}

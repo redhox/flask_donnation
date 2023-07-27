@@ -11,7 +11,7 @@ def index():
     donation=get_donateur()
     montant=0
     for donateur in donation:
-        montant += donateur['don']
+        montant += donateur[2]
         
     return render_template('index.html',montant=montant)
 
@@ -27,7 +27,10 @@ def remerciment():
     don= request.form.get('don')
     message= request.form.get('message')
     set_donateur(nom, prenom,don,message)
+    
     return render_template('remerciment.html',nom=nom,prenom=prenom,don=don,message=message,donateur=get_donateur())
-
+@app.route('/don')
+def afichage_don():
+    return render_template('remerciment.html',donateur=get_donateur())
 if __name__ == "__main__":
     app.run(debug=True)
