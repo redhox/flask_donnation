@@ -12,7 +12,7 @@ def connexion():
     global bdd
     global cursor
     load_dotenv()
-    bdd = mysqlpyth.connect(user = 'root',password = 'example',host ='localhost',port = '3307',database = 'donnation')
+    bdd = mysqlpyth.connect(user = os.getenv('USER_BDD'),password = os.getenv('PASSWORD'),host =os.getenv('HOST'),port = os.getenv('PORT'),database = os.getenv('DATABASE'))
     cursor = bdd.cursor()
     return bdd, cursor
 

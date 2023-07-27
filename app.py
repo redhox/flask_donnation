@@ -26,7 +26,6 @@ def remerciment():
     prenom= request.form.get('prenom')
     don= request.form.get('don')
     message= request.form.get('message')
-    print(f"entre={nom},{prenom},{don},{message}")
     set_donateur(nom, prenom,don,message)
     return render_template('remerciment.html',nom=nom,prenom=prenom,don=don,message=message,donateur=get_donateur())
 
