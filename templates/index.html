@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
 <section class="centrer"id="index_box">
-    chifre={{montant}}
-    <h1>{% block title %} Welcome to FlaskBlog index {% endblock %}</h1>
-    <a href="{{url_for("formulaire")}}">bouton</a>
+    <span>{{montant}}€</span>
+    <h1>{% block title %}SOUTIEN LA REBELION {% endblock %}</h1>
+    <a href="{{url_for("formulaire")}}"><div>faire un don</div></a>
 </section>
 
 {% endblock %}
